@@ -27,7 +27,6 @@ img {
 .sp-only {
   display: none;
 }
-
 /*--------------------------------
  レイアウト
 ---------------------------------*/
@@ -399,7 +398,49 @@ img {
 .home-link {
   text-align: center;
 }
+/*=================================
+アニメーション
+==================================*/
+.fadeUpTrigger{
+  opacity: 0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
 
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:1.8s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+.zoomIn{
+  animation-name:zoomInAnime;
+  animation-duration:1.8s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes zoomInAnime{
+  from {
+  transform: scale(0.6);
+  opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+  opacity: 1;
+  }
+}
+.false-text{
+  color: blue;
+}
 /*media Queries 767
 ----------------------------------------------------*/
 @media screen and (max-width: 767px) {
@@ -512,6 +553,7 @@ img {
   .skill-item {
     width: 100%;
     margin-bottom: 35px;
+    opacity: 0;
   }
 
   .skill-item:last-child {
