@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>works</title>
     <link rel="shortcut icon" href="img/t-text.svg" />
-    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
     <link href="css/ress.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/worklist-style.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="wrapper">
@@ -15,21 +16,36 @@
             <h1 class="header-logo">
                 <a href="index.html">TOMATOLIAN</a>
             </h1>
-            <nav class="gnav">
-                <ul class="gnav-list">
-                <li class="gnav-item"><a href=".#works">WORKS</a></li>
-                <li class="gnav-item"><a href="./#skill">SKILL</a></li>
-                <li class="gnav-item"><a href="./#about">ABOUT</a></li>
-                <li class="gnav-item"><a href="./#contact">CONTACT</a></li>
-                </ul>
-            </nav>
             </div>
         </header>
+    </div>
+    <div class="serch-box">
+        Language:
+        <input id="all" class="box-radio" type="radio" name="language" value="all" checked>
+        <label class="box-radio-label" for="all">
+            ALL
+        </label> 
+        <input id="python" class="box-radio" type="radio" name="language" value="python">
+        <label class="box-radio-label" for="python">
+            Python
+        </label>
+        <input id="dart" class="box-radio" type="radio" name="language" value="dart">
+        <label class="box-radio-label" for="dart">
+            Dart
+        </label>
+        <input id="cplusplus" class="box-radio" type="radio" name="language" value="cplusplus">
+        <label class="box-radio-label" for="cplusplus">
+            C++
+        </label>
+
     </div>
     <section class="works　section">
         <div class="container">
             
         </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type='text/javascript' src="js/script.js"></script>
+    <script type='text/javascript' src="js/url-params.js"></script>
 </body>
 </html>
