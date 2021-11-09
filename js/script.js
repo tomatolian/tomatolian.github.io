@@ -56,5 +56,17 @@ $(function () {
         $(".false3").css("color","red").text("働かずに遊んで暮らす事です。")
       }).fadeIn(1000)
     });
+    $(".works-item").addClass("hide_item")
+    $('input').change(function(){
+      element = document.getElementById("serch-box")
+      console.log(element)
+      if (element=="all") {
+        console.log(1)
+        $(".works-item").removeClass("hide_item")
+      }
+      else if ($(".works-item").data("language")==element) {
+        $(this).removeClass("hide_item")
+      }
+    }); 
   });
 

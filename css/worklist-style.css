@@ -19,4 +19,6 @@
     color: #fff;
     text-shadow: 0 0 1px rgba(0,0,0,.7);
 }
-
+.hide_item {
+    display: none !important;
+}
