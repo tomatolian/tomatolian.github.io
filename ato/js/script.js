@@ -4,6 +4,7 @@ $(function(){
         var img_pass = $(this).children("img").attr('src')
         console.log(img_pass)
         $(".modal-img").attr("src",img_pass)
+        $(this).children("img").fadeOut(3000);
         wait(3).done(function(){
         $('.js-modal').fadeOut();    
         });
