@@ -7,8 +7,7 @@ $('#canvas').attr('height', h);
 var t = 0.1;
 var s = 100;
 var n = 10000;
-var pattern = Math.floor(Math.random() *10);
-pattern = 9;
+var pattern = Math.floor(Math.random() *9);
 // 四角形
 if (pattern==0) { //寒天
     var t = 0.2;
@@ -189,26 +188,7 @@ if (pattern==0) { //寒天
         ctx.lineTo(randnum_x+5, randnum_y+10);
         ctx.stroke();
     };
-// } else if (pattern==8) { 
-//     var t = 1;
-//     var s = 3;
-//     var n = 1000;
-//     ctx.fillStyle="#fff"
-//     ctx.fillRect(0, 0,canvas.width, canvas.height);
-//     function sandstorm(){
-//         for (i=0; i<n; i++) {
-//             ctx.fillStyle="#000"
-//             ctx.beginPath();
-//             var randnum_x = Math.floor( Math.random() * w );
-//             var randnum_y = Math.floor( Math.random() * h );
-//             ctx.fillRect(randnum_x, randnum_y, s, s);
-//         }
-//     }
-//     for (j=0; j<100; j++) {
-//         sandstorm()
-//     }
-// 
-} else if (pattern==9) { 
+} else if (pattern==8) { 
     $(".mv-title").css("text-stroke","1px #FFF");
     $(".mv-subtitle").css("text-stroke","1px #FFF");
     $(".mv-text").css("text-stroke","1px #FFF");
@@ -232,4 +212,23 @@ if (pattern==0) { //寒天
         
     }
 }
+//  else if (pattern==9) { 
+//     var t = 1;
+//     var s = 3;
+//     var n = 1000;
+//     ctx.fillStyle="#fff"
+//     ctx.fillRect(0, 0,canvas.width, canvas.height);
+//     function sandstorm(){
+//         for (i=0; i<n; i++) {
+//             ctx.fillStyle="#000"
+//             ctx.beginPath();
+//             var randnum_x = Math.floor( Math.random() * w );
+//             var randnum_y = Math.floor( Math.random() * h );
+//             ctx.fillRect(randnum_x, randnum_y, s, s);
+//         }
+//     }
+//     for (j=0; j<100; j++) {
+//         sandstorm()
+//     }
+// 
 
