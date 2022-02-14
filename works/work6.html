@@ -6,7 +6,7 @@
     <title>works</title>
     <link rel="shortcut icon" href="../img/t-text.svg" />
     <link href="../css/ress.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="../css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css?20220214" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
     <header class="header ">
       <div class="container">
         <h1 class="header-logo">
-          <a href=".">TOMATOLIAN</a>
+          <a href="../index.html">TOMATOLIAN</a>
         </h1>
         <nav class="gnav">
           <ul class="gnav-list">
@@ -34,34 +34,22 @@
 
       <article class="article">
         <div class="article-container">
-          <h2 class="article-title"></h2>
+          <h2 class="article-title">バンダイナムコ研究所・データサイエンス・チャレンジ</h2>
           <div class="article-body">
-            <p>
-              <img src="img/works-sample.jpg" alt="">
+            <p class="works-cap">
+              <img src="../img/contest2.png" alt="">
             </p>
-            <iframe src="https://drive.google.com/file/d/1j4e8DMaFwxIchpyeoGMQAr2W0cBaUp1h/preview" width="640" height="480" allow="autoplay"></iframe>
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります（作品について一言）
+            <h3>概要</h3>
+            <p> メールでお知らせ届き、面白そうだったから参加しました。<br>
+              このコンテストは、欠損したモーションデータを補完するというものでした。モーションデータは体の各部位の座標がcsvに書き込まれたものでした。
+              難易度ごとに5フレーム・15フレーム・45フレームに1フレームのみ書き込まれた状態になっており、その間のフレームの座標を補完していきます。<br>
+              モーション補完なんてほとんど知らない世界だったので、どのように取り組めば良いのかで非常に悩まされました。欠損していないtrainデータも渡されていたので何かしら機械学習に落とし込むことが予想されましたが、ギリギリ滑り込みで参加してしまったこともあり
+              時間がなかったので、slerp(球面線形補完)のみをとりあえず行いました。結果は33/166位でした。
             </p>
-            <h3>URL</h3>
-            <p><a href="https://yahoo.co.jp" target="_blank" rel="noopener">https://yahoo.co.jp</a></p>
-            <h3>担当</h3>
-            <p>デザイン・コーディング</p>
-            <h3>サイトの目的</h3>
-            <p>サービスの認知と新規クライアントの獲得</p>
-            <h3>ターゲット</h3>
-            <p>テキストが入りますテキストが入ります</p>
-            <h3>デザインについて</h3>
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。<br>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-            </p>
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
-            </p>
-            <h3>コーディングについて</h3>
-            <p>
-              テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります。
-            </p>
+            <h3>取り組み形態</h3>
+            <p>個人</p>
+            <h3>使用ツール</h3>
+            <p>python</p>
           </div>
           <div class="home-link">
             <a href="./#works">Works一覧へ</a>
