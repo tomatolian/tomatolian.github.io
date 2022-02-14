@@ -7,8 +7,7 @@ $('#canvas').attr('height', h);
 var t = 0.1;
 var s = 100;
 var n = 10000;
-var pattern = Math.floor(Math.random() *9);
-// 四角形
+var pattern = Math.floor(Math.random() *6);
 if (pattern==0) { //寒天
     var t = 0.2;
     var s = 100;
@@ -59,50 +58,7 @@ if (pattern==0) { //寒天
         ctx.lineTo(randnum_x, randnum_y);
         ctx.stroke();
     };
-} else if (pattern==2) { //水彩画風
-    var t = 0.1;
-    var s = 100;
-    var n = 10000;
-    ctx.fillStyle="#fff"
-    ctx.fillRect(0, 0,canvas.width, canvas.height);
-    console.log(w,h)
-    for (let i=0; i<n ;i++) {
-        var randnum_x = Math.floor( Math.random() * w );
-        var randnum_y = Math.floor( Math.random() * h );
-        ctx.fillStyle = "rgba(" + [0, 0, 255, t] + ")";
-        ctx.fillRect(randnum_x, randnum_y, s, 5);
-    };
-    for (let i=0; i<n ; i++) {
-        var randnum_x = Math.floor( Math.random() * w );
-        var randnum_y = Math.floor( Math.random() * h );
-        ctx.fillStyle = "rgba(" + [0, 255, 0, t] + ")";
-        ctx.fillRect(randnum_x, randnum_y, s, 5);
-    };
-    for (let i=0; i<n ; i++) {
-        var randnum_x = Math.floor( Math.random() * w );
-        var randnum_y = Math.floor( Math.random() * h );
-        ctx.fillStyle = "rgba(" + [255, 0, 0, t] + ")";
-        ctx.fillRect(randnum_x, randnum_y, s, 5);
-    };
-} else if (pattern==3) { //カラフル線
-    var t = 0.5;
-    var s = 100;
-    var n = 5000;
-    ctx.fillStyle="#fff"
-    ctx.fillRect(0, 0,canvas.width, canvas.height);
-    for (let i=0; i<n ;i++) {
-        ctx.beginPath();
-        var randnum_x = Math.floor( Math.random() * w );
-        var randnum_y = Math.floor( Math.random() * h );
-        var rand_r = Math.floor( Math.random() * 256 );
-        var rand_g = Math.floor( Math.random() * 256 );
-        var rand_b = Math.floor( Math.random() * 256 );
-        ctx.strokeStyle = "rgba(" + [rand_r, rand_g, rand_b, t] + ")";
-        ctx.moveTo(w/2, h/2);
-        ctx.lineTo(randnum_x, randnum_y);
-        ctx.stroke();
-    };
-} else if (pattern==4) { //マル
+} else if (pattern==2) { //マル
     var t = 1;
     var s = 50;
     var n = 40;
@@ -118,7 +74,7 @@ if (pattern==0) { //寒天
         ctx.fill();
     
 };
-} else if (pattern==5) { //ドーナッツ
+} else if (pattern==3) { //ドーナッツ
     var t = 1;
     var s = 50;
     var n = 20;
@@ -137,7 +93,7 @@ if (pattern==0) { //寒天
         ctx.arc(randnum_x, randnum_y, s*0.8, 0, 2 * Math.PI,true);
         ctx.fill();
 };
-} else if (pattern==6) {  //ランドルト 
+} else if (pattern==4) {  //ランドルト 
     $(".mv-title").css("text-stroke","1px #FFF");
     $(".mv-subtitle").css("text-stroke","1px #FFF");
     $(".mv-text").css("text-stroke","0.4px #FFF");
@@ -166,29 +122,8 @@ if (pattern==0) { //寒天
         ctx.lineTo(s*  1.01 * Math.cos(theta)+randnum_x, s * 1.01* Math.sin(theta)+randnum_y);
         ctx.stroke();
 };
-} else if (pattern==7) { 
-    var t = 1;
-    var s = 100;
-    var n = 300;
-    ctx.fillStyle="#fff"
-    $(".mv-title").css("background","#fff").text("漆黒の十魔十");
-    $(".mv-subtitle").css("background","#fff").text("黒魔術ノート");
-    $(".mv-text").css("background","#fff").text("右手が疼く...");
-    ctx.fillRect(0, 0,canvas.width, canvas.height);
-    ctx.strokeStyle = "#000"
-    for (let i=0; i<n ; i++) {
-        ctx.beginPath();
-        var randnum_x = Math.floor( Math.random() * w );
-        var randnum_y = Math.floor( Math.random() * h );
-        ctx.moveTo(randnum_x, randnum_y);
-        ctx.lineTo(randnum_x+10, randnum_y);
-        lineWidth=4;
-        ctx.stroke();
-        ctx.moveTo(randnum_x+5, randnum_y-5);
-        ctx.lineTo(randnum_x+5, randnum_y+10);
-        ctx.stroke();
-    };
-} else if (pattern==8) { 
+
+} else if (pattern==5) { 
     $(".mv-title").css("text-stroke","1px #FFF");
     $(".mv-subtitle").css("text-stroke","1px #FFF");
     $(".mv-text").css("text-stroke","1px #FFF");
@@ -212,23 +147,3 @@ if (pattern==0) { //寒天
         
     }
 }
-//  else if (pattern==9) { 
-//     var t = 1;
-//     var s = 3;
-//     var n = 1000;
-//     ctx.fillStyle="#fff"
-//     ctx.fillRect(0, 0,canvas.width, canvas.height);
-//     function sandstorm(){
-//         for (i=0; i<n; i++) {
-//             ctx.fillStyle="#000"
-//             ctx.beginPath();
-//             var randnum_x = Math.floor( Math.random() * w );
-//             var randnum_y = Math.floor( Math.random() * h );
-//             ctx.fillRect(randnum_x, randnum_y, s, s);
-//         }
-//     }
-//     for (j=0; j<100; j++) {
-//         sandstorm()
-//     }
-// 
-

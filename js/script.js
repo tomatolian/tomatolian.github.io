@@ -1,5 +1,4 @@
 $(function () {
-
   var navHeight = $(".header").outerHeight();
 
   $('a[href^="#"]').on("click", function () {
@@ -9,7 +8,23 @@ $(function () {
     $("html, body").animate({ scrollTop: position, }, 300, "swing");
     return false;
   });
-
+  $(window).on('load', function() {
+    element = document.getElementsByName('language')
+    len=element.length
+    for (let i = 0; i < len; i++){
+      if (element[0].checked){
+        $('.'+element[i].value).removeClass("hide_item")
+      }
+      else if (element[i].checked){
+        $('.'+element[i].value).removeClass("hide_item")
+        console.log('.'+element[i].value)
+      }
+      else{
+        $('.'+element[i].value).addClass("hide_item")
+        console.log('.'+element[i].value)
+      }
+    }  
+  });
   $("#js-page-top").on("click", function () {
     $("body,html").animate({ scrollTop: 0, }, 300);
     return false;
@@ -41,32 +56,27 @@ $(function () {
     $(window).scroll(function (){
       fadeAnime();
     });
-    $(".false1").one("click",function(){
-      $(".false1").fadeOut(1000,function(){
-        $(".false1").css("color","red").text("無能")
-      }).fadeIn(1000)
+    $("box-radio").on("click", function () {
+
+      return false;
     });
-    $(".false2").one("click",function(){
-      $(".false2").fadeOut(1000,function(){
-        $(".false2").css("color","red").text("何もわかりません...")
-      }).fadeIn(1000)
-    });
-    $(".false3").one("click",function(){
-      $(".false3").fadeOut(1000,function(){
-        $(".false3").css("color","red").text("働かずに遊んで暮らす事です。")
-      }).fadeIn(1000)
-    });
-    $(".works-item").addClass("hide_item")
     $('input').change(function(){
-      element = document.getElementById("serch-box")
-      console.log(element)
-      if (element=="all") {
-        console.log(1)
-        $(".works-item").removeClass("hide_item")
-      }
-      else if ($(".works-item").data("language")==element) {
-        $(this).removeClass("hide_item")
+      element = document.getElementsByName('language')
+      len=element.length
+      for (let i = 0; i < len; i++){
+        if (element[0].checked){
+          $('.'+element[i].value).removeClass("hide_item")
+        }
+        else if (element[i].checked){
+          $('.'+element[i].value).removeClass("hide_item")
+          console.log('.'+element[i].value)
+        }
+        else{
+          $('.'+element[i].value).addClass("hide_item")
+          console.log('.'+element[i].value)
+        }
       }
     }); 
   });
+
 
