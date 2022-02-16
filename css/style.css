@@ -75,7 +75,7 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color:  #22ccff;
+  background-color:  rgba(22,205,256,.8);
   box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
 }
 
