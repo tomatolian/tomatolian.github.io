@@ -400,6 +400,25 @@ img {
 .home-link {
   text-align: center;
 }
+.slide-button{
+  transform: translate(-50%,0);
+  margin-left: 50%;
+  margin-right: auto;
+  width:-moz-fit-content;
+  width:fit-content;
+}
+.slide-button p{
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.slide-button input{
+  display: inline-block;
+  margin: 10px;
+}
+
 /*=================================
 アニメーション
 ==================================*/

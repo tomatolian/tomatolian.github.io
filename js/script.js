@@ -53,14 +53,17 @@ $(function () {
       }
       });
     }
+    $('.pre-button').on('click',function(){
+      pass=$('.slide').attr('src')
+      console.log(pass)
+    })
     $(window).scroll(function (){
       fadeAnime();
     });
     $("box-radio").on("click", function () {
-
       return false;
     });
-    $('input').change(function(){
+    $('input[name=language]').change(function(){
       element = document.getElementsByName('language')
       len=element.length
       for (let i = 0; i < len; i++){
@@ -76,6 +79,30 @@ $(function () {
           console.log('.'+element[i].value)
         }
       }
+    }); 
+    $('.pre-button').on('click',function(){
+      current_value=$('input[name=slider]:checked').val()
+      if (Number(current_value)===1){
+        next_value='5'
+      }else{
+        next_value=(Number(current_value)-1).toString()
+      }
+      $('input[name=slider]').val([next_value])
+      $('.slide').attr('src','../img/work9-'+next_value+'.png')
+    })
+    $('.nex-button').on('click',function(){
+      current_value=$('input[name=slider]:checked').val()
+      if (Number(current_value)===5){
+        next_value='1'
+      }else{
+        next_value=(Number(current_value)+1).toString()
+      }
+      $('input[name=slider]').val([next_value])
+      $('.slide').attr('src','../img/work9-'+next_value+'.png')
+    })
+    $('input[name=slider]').change(function(){
+      num=$('input[name=slider]:checked').val()
+      $('.slide').attr('src','../img/work9-'+num+'.png')
     }); 
   });
 
