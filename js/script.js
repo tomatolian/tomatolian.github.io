@@ -11,7 +11,7 @@ $(function () {
   $(window).on('load', function() {
     element = document.getElementsByName('language')
     len=element.length
-    console.log('test')
+    console.log(element)
     for (let i = 0; i < len; i++){
       if (element[0].checked){
         $('.'+element[i].value).removeClass("hide_item")
