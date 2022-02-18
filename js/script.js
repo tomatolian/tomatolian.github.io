@@ -1,30 +1,11 @@
 $(function () {
   var navHeight = $(".header").outerHeight();
-
   $('a[href^="#"]').on("click", function () {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? "html" : href);
     var position = target.offset().top - navHeight;
     $("html, body").animate({ scrollTop: position, }, 300, "swing");
     return false;
-  });
-  $(window).on('load', function() {
-    element = document.getElementsByName('language')
-    len=element.length
-    console.log(element)
-    for (let i = 0; i < len; i++){
-      if (element[0].checked){
-        $('.'+element[i].value).removeClass("hide_item")
-      }
-      else if (element[i].checked){
-        $('.'+element[i].value).removeClass("hide_item")
-        console.log('.'+element[i].value)
-      }
-      else{
-        $('.'+element[i].value).addClass("hide_item")
-        console.log('.'+element[i].value)
-      }
-    }  
   });
   $("#js-page-top").on("click", function () {
     $("body,html").animate({ scrollTop: 0, }, 300);
