@@ -76,7 +76,7 @@ img {
   z-index: 1;
   width: 100%;
   background-color:  rgba(22,205,256,.8);
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px -6px rgba(187, 170, 170, 0.1);
 }
 
 .header .container {
@@ -256,6 +256,7 @@ img {
 }
 .skill-img:hover{
   width: 70px;
+  transform: translate(-5px,-5px);
   transition: 0.5s;
 }
 .skill-body {
