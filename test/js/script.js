@@ -1,3 +1,4 @@
+scene = new THREE.Scene(); 
 new THREE.GLTFLoader()
    .setPath( '/test/models/' )
    .load( 'Flower.glb', function ( gltf ) {
