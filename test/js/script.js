@@ -24,12 +24,16 @@ function init() {
   );
   camera.position.set(0, 0, +1000);
 
-  // 箱を作成
-  const geometry = new THREE.BoxGeometry(10, 10, 10);
+  const obj=new THREE.GLTFLoader()
+   .setPath( '/test/models/' )
+   .load( 'Flower.glb', function ( gltf ) {
+    gltf.scene.scale.set(100,100,100)
+    scene.add(gltf.scene);
+   }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  const box = new THREE.Mesh(geometry, material);
+  const box = new THREE.Mesh(obj, material);
   scene.add(box);
 
   // 平行光源
