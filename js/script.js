@@ -62,29 +62,36 @@ $(function () {
         }
       }
     }); 
+    let last_value = $(".slide-button input").length;
+    $('.works-cap').children('img').hide();
+    $('.works-cap').children('.im1').show();
     $('.pre-button').on('click',function(){
       current_value=$('input[name=slider]:checked').val()
-      if (Number(current_value)===1){
-        next_value='5'
-      }else{
-        next_value=(Number(current_value)-1).toString()
-      }
-      $('input[name=slider]').val([next_value])
-      $('.slide').attr('src','../img/work9-'+next_value+'.png')
+    if (Number(current_value)===1){
+      next_value=last_value.toString()
+    }else{
+     next_value=(Number(current_value)-1).toString()
+    }
+     $('input[name=slider]').val([next_value])
+    
+     $('.works-cap').children('.im'+current_value).hide()
+     $('.works-cap').children('.im'+next_value).show()
     })
     $('.nex-button').on('click',function(){
-      current_value=$('input[name=slider]:checked').val()
-      if (Number(current_value)===5){
-        next_value='1'
-      }else{
-        next_value=(Number(current_value)+1).toString()
-      }
-      $('input[name=slider]').val([next_value])
-      $('.slide').attr('src','../img/work9-'+next_value+'.png')
+     current_value=$('input[name=slider]:checked').val()
+    if (Number(current_value)===last_value){
+     next_value='1'
+    }else{                                                                                                                                  
+     next_value=(Number(current_value)+1).toString()
+    }
+     $('input[name=slider]').val([next_value])
+     $('.works-cap').children('.im'+current_value).hide()
+     $('.works-cap').children('.im'+next_value).show()
     })
     $('input[name=slider]').change(function(){
-      num=$('input[name=slider]:checked').val()
-      $('.slide').attr('src','../img/work9-'+num+'.png')
+     num=$('input[name=slider]:checked').val()
+     $('.works-cap').children('img').hide();
+     $('.works-cap').children('.im'+num).show()
     }); 
   });
 
