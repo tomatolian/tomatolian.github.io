@@ -27,7 +27,7 @@ function init() {
   const obj=new THREE.GLTFLoader()
    .setPath( '/test/models/' )
    .load( 'Flower.glb', function ( gltf ) {
-    gltf.scene.scale.set(100,100,100)
+    gltf.scene.scale.set(1000,1000,1000)
     scene.add(gltf.scene);
    }); 
   const material = new THREE.MeshStandardMaterial({
