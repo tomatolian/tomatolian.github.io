@@ -27,7 +27,7 @@ function init() {
 
   new THREE.GLTFLoader()
    .setPath( '/test/models/' )
-   .load( 'Flower.glb', function ( gltf ) {
+   .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
     flower.scale.set(100,100,100)
     scene.add(flower);
