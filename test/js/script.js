@@ -1,5 +1,5 @@
 scene = new THREE.Scene(); 
-var axes = new THREE.AxisHelper(25);
+var axes = new THREE.AxesHelper(25);
 scene.add(axes);
 obj=new THREE.GLTFLoader()
    .setPath( '/test/models/' )
