@@ -35,8 +35,8 @@ function init() {
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  const box = new THREE.Mesh(flower, material);
-  scene.add(box);
+  // const box = new THREE.Mesh(flower, material);
+  // scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
@@ -52,8 +52,8 @@ function init() {
     requestAnimationFrame(tick);
     console.log('a');
     // 箱を回転させる
-    box.rotation.x += 0.01;
-    box.rotation.z += 0.01;
+    flower.rotation.x += 0.01;
+    flower.rotation.z += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
