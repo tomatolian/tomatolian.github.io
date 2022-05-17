@@ -42,14 +42,14 @@ function init() {
   scene.add(light);
 
   // 初回実行
-  tick();
+  // tick();
 
   function tick() {
     requestAnimationFrame(tick);
 
     // 箱を回転させる
-    obj.rotation.x += 0.01;
-    obj.rotation.y += 0.01;
+    box.rotation.x += 0.01;
+    box.rotation.y += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
