@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
   const width = 960;
   const height = 540;
+  var flower;
 
   // レンダラーを作成
   const renderer = new THREE.WebGLRenderer({
@@ -24,16 +25,16 @@ function init() {
   );
   camera.position.set(0, 0, +100);
 
-  const obj=new THREE.GLTFLoader()
+  new THREE.GLTFLoader()
    .setPath( '/test/models/' )
    .load( 'Flower.glb', function ( gltf ) {
-    gltf.scene.scale.set(100,100,100)
-    scene.add(gltf.scene);
+    flower=gltf.scene
+    flower.scale.set(100,100,100)
    }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  const box = new THREE.Mesh(obj, material);
+  const box = new THREE.Mesh(flower, material);
   scene.add(box);
 
   // 平行光源
@@ -51,16 +52,9 @@ function init() {
     console.log('a');
     // 箱を回転させる
     box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
+    box.rotation.z += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
   }
 }
-// scene = new THREE.Scene(); 
-// obj=new THREE.GLTFLoader()
-//    .setPath( '/test/models/' )
-//    .load( 'Flower.glb', function ( gltf ) {
-//     gltf.scene.scale.set(100,100,100)
-//     scene.add(gltf.scene);
-//    }); 
