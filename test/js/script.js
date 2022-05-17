@@ -22,7 +22,7 @@ function init() {
     1,
     10000
   );
-  camera.position.set(0, 0, +1000);
+  camera.position.set(0, 0, +100);
 
   const obj=new THREE.GLTFLoader()
    .setPath( '/test/models/' )
