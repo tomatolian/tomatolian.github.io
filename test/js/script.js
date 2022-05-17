@@ -23,7 +23,7 @@ function init() {
     1,
     10000
   );
-  camera.position.set(0, 0, +100);
+  camera.position.set(0, 0, +200);
 
   new THREE.GLTFLoader()
    .setPath( '/test/models/' )
@@ -50,7 +50,6 @@ function init() {
 
   function tick() {
     requestAnimationFrame(tick);
-    console.log('a');
     // 箱を回転させる
     flower.rotation.y += 0.01;
     // flower.rotation.z += 0.01;
