@@ -13,7 +13,8 @@ function init() {
 
   // シーンを作成
   const scene = new THREE.Scene();
-
+  var axes = new THREE.AxesHelper(25);
+  scene.add(axes);
   // カメラを作成
   const camera = new THREE.PerspectiveCamera(
     45,
@@ -52,3 +53,10 @@ function init() {
     renderer.render(scene, camera);
   }
 }
+// scene = new THREE.Scene(); 
+// obj=new THREE.GLTFLoader()
+//    .setPath( '/test/models/' )
+//    .load( 'Flower.glb', function ( gltf ) {
+//     gltf.scene.scale.set(100,100,100)
+//     scene.add(gltf.scene);
+//    }); 
