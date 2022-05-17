@@ -30,6 +30,7 @@ function init() {
    .load( 'Flower.glb', function ( gltf ) {
     flower=gltf.scene
     flower.scale.set(100,100,100)
+    scene.add(flower);
    }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
