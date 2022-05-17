@@ -29,7 +29,7 @@ function init() {
    .setPath( '/test/models/' )
    .load( 'RobotExpressive.glb', function ( gltf ) {
     flower=gltf.scene
-    flower.scale.set(100,100,100)
+    flower.scale.set(10,10,10)
     scene.add(flower);
    }); 
   const material = new THREE.MeshStandardMaterial({
