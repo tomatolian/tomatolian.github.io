@@ -28,6 +28,7 @@ function init() {
    .setPath( '/test/models/' )
    .load( 'Flower.glb', function ( gltf ) {
     gltf.scene.scale.set(100,100,100)
+    scene.add(gltf.scene);
    }); 
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
@@ -47,7 +48,7 @@ function init() {
 
   function tick() {
     requestAnimationFrame(tick);
-
+    console.log('a');
     // 箱を回転させる
     box.rotation.x += 0.01;
     box.rotation.y += 0.01;
