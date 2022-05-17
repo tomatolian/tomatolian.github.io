@@ -33,6 +33,8 @@ function init() {
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
+  const box = new THREE.Mesh(obj, material);
+  scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
@@ -42,7 +44,7 @@ function init() {
   scene.add(light);
 
   // 初回実行
-  // tick();
+  tick();
 
   function tick() {
     requestAnimationFrame(tick);
