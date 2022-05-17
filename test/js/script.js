@@ -33,8 +33,6 @@ function init() {
   const material = new THREE.MeshStandardMaterial({
     color: 0x0000ff
   });
-  const box = new THREE.Mesh(obj, material);
-  scene.add(box);
 
   // 平行光源
   const light = new THREE.DirectionalLight(0xffffff);
@@ -50,8 +48,8 @@ function init() {
     requestAnimationFrame(tick);
 
     // 箱を回転させる
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
+    obj.rotation.x += 0.01;
+    obj.rotation.y += 0.01;
 
     // レンダリング
     renderer.render(scene, camera);
