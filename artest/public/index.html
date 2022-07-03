@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>AR TEST</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body style="margin: 0;">
+  <div class="canvs">
+    <div id="target0" class="target">   
+      <div class="cf">
+        <h3>A-Frame</h3>
+        <p>A-Frameは簡単にWeb VRが実現できるフレームワークです。</p>
+      </div>
+    </div>
+  </div>
+  <a-scene>
+
+  <a-marker preset="hiro" class="test">
+    <a-plane position="0 0 0" rotation="-90 0 0" width="4" height="2.5" material="shader:html;target: #target0;">
+    </a-plane>
+    <a-plane position="0 0 1.5" rotation="-90 0 0" width="4" height="2.5" material="shader:html;target: #target1;">
+    </a-plane>
+  </a-marker>
+  <a-entity camera></a-entity>
+
+  </a-scene>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAJoVIWeetcbJfVeGaiuH2m3IxVHM9O8z8",
+      authDomain: "ar-shaders.firebaseapp.com",
+      projectId: "ar-shaders",
+      storageBucket: "ar-shaders.appspot.com",
+      messagingSenderId: "938603650854",
+      appId: "1:938603650854:web:4e5406fdae862469516be7",
+      measurementId: "G-EWT97QPGJG"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
